@@ -11,6 +11,12 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 alias ll="ls -l"
 alias la="ls -la"
+alias cdd="cd ~/Developer"
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/maks/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
